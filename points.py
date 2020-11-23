@@ -8,7 +8,7 @@ class Points:
         self.y = b
         self.c = c
         if ((self.x**3 + c.a*self.x + c.b - self.y**2)%c.p != 0):
-            raise Exception('not coprime')
+            raise Exception('point does not lie in the curve')
         
     def __add__(self, other):
         if (other == Points.INFINITY):
