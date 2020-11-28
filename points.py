@@ -7,8 +7,9 @@ class Points:
         self.x = a
         self.y = b
         self.c = c
-        if ((self.x**3 + c.a*self.x + c.b - self.y**2)%c.p != 0):
-            raise Exception('not coprime')
+        
+        if (((self.x**3 + c.a*self.x + c.b - self.y**2 + c.p)%c.p) != 0):
+            raise Exception('point not in the curve')
         
     def __add__(self, other):
         if (other == Points.INFINITY):
@@ -38,6 +39,14 @@ class Points:
         
     def __mul__(self, k):
         return Points.mul(self, k)
+        
+    def __sub__(self, other):
+        print(str(other))
+        
+        other.y = other.c.p  - other.y
+        print(str(other))
+        return self + other
+        
         
     def mul(a, b):
         if (b < 0):
