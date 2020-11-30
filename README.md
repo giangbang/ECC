@@ -8,6 +8,4 @@ and set the base point by
 ```
 curve.setG(Points)
 ```
-For now, just some simple functionalities are available (eg adding, multiplying points), other functions will be added later
-
 
