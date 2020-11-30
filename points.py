@@ -7,6 +7,7 @@ class Points:
         self.x = a
         self.y = b
         self.c = c
+
         
         if (((self.x**3 + c.a*self.x + c.b - self.y**2 + c.p)%c.p) != 0):
             raise Exception('point not in the curve')
