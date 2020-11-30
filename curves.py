@@ -61,6 +61,7 @@ def encrypt(message):
     return res
 
 
+
 if __name__ == '__main__':
     c = Curves()
     g = c.getG()
